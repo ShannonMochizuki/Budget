@@ -1,4 +1,4 @@
-const VERSION='1.0.1',KEY='budgetCompassDataV1';
+const VERSION='1.0.2',KEY='budgetCompassDataV1';
 const cats=['Food & Drinks','Transport','Groceries','Shopping','Bills','Home','Entertainment','Health','Gifts','Other'];
 const defaults={transactions:[],budgets:{'Food & Drinks':600,Transport:150,Groceries:350,Shopping:200,Bills:500,Home:200,Entertainment:150,Health:100,Gifts:100,Other:150},recurring:[],goals:[]};
 let data=load(),deferredPrompt=null; const $=x=>document.getElementById(x),money=n=>'S$'+Number(n||0).toLocaleString('en-SG',{minimumFractionDigits:2,maximumFractionDigits:2});
@@ -22,4 +22,4 @@ $('exportBtn').onclick=()=>{let blob=new Blob([JSON.stringify({version:VERSION,e
 $('importFile').onchange=async e=>{try{let x=JSON.parse(await e.target.files[0].text());if(!x.data)throw 0;data=x.data;save();alert('Backup restored.')}catch{alert('That backup file could not be read.')}};
 $('clearBtn').onclick=()=>{if(confirm('Erase all Budget Compass data on this device?')){data=structuredClone(defaults);save()}};
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;$('installBtn').hidden=false});$('installBtn').onclick=async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;$('installBtn').hidden=true};
-if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');render();
+if('serviceWorker'in navigator)navigator.serviceWorker.register('/Budget/sw.js',{scope:'/Budget/'}).catch(console.error);render();

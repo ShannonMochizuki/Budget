@@ -1,1 +1,17 @@
-{"name":"Budget Compass","short_name":"Budget","description":"Local-first personal budgeting and expense tracker","start_url":"./index.html","display":"standalone","background_color":"#f4f6f8","theme_color":"#162238","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}],"id":"budget-compass","scope":"./","orientation":"any"}
+{
+  "id": "/Budget/",
+  "name": "Budget Compass",
+  "short_name": "Budget",
+  "description": "Local-first personal budgeting and expense tracker",
+  "start_url": "/Budget/",
+  "scope": "/Budget/",
+  "display": "standalone",
+  "background_color": "#f4f6f8",
+  "theme_color": "#162238",
+  "orientation": "any",
+  "icons": [
+    {"src":"/Budget/icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"/Budget/icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"/Budget/icons/icon-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ]
+}
