@@ -1,9 +1,9 @@
-const CACHE = 'budget-compass-v1.0.4';
+const CACHE = 'budget-compass-v1.0.5';
 const APP_ROOT = '/Budget/';
 const CORE = [
   APP_ROOT,
   APP_ROOT + 'index.html',
-  APP_ROOT + 'app.js?v=1.0.4',
+  APP_ROOT + 'app.js?v=1.0.5',
   APP_ROOT + 'manifest.webmanifest'
 ];
 const OPTIONAL = [
