@@ -1,4 +1,4 @@
-const VERSION='1.0.3',KEY='budgetCompassDataV1';
+const VERSION='1.0.4',KEY='budgetCompassDataV1';
 const cats=['Food & Drinks','Transport','Groceries','Shopping','Bills','Home','Entertainment','Health','Gifts','Other'];
 const defaults={transactions:[],budgets:{'Food & Drinks':600,Transport:150,Groceries:350,Shopping:200,Bills:500,Home:200,Entertainment:150,Health:100,Gifts:100,Other:150},recurring:[],goals:[]};
 let data=load(),deferredPrompt=null; const $=x=>document.getElementById(x),money=n=>'S$'+Number(n||0).toLocaleString('en-SG',{minimumFractionDigits:2,maximumFractionDigits:2});
